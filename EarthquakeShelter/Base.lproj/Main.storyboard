@@ -123,12 +123,56 @@
                                 <segue destination="Awi-GW-K16" kind="show" id="X2K-Bc-mSz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="지도" id="g0l-HY-yKp"/>
+                        <barButtonItem key="rightBarButtonItem" title="지도" id="g0l-HY-yKp">
+                            <connections>
+                                <segue destination="4yx-1O-ehN" kind="show" id="3Dq-ip-C1h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIo-rN-K2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="88.605697151424295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jkr-FC-B1s">
+            <objects>
+                <viewController id="4yx-1O-ehN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="P3L-k9-eXv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w92-PH-MUC">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="WBa-Vh-ySy"/>
+                                    <constraint firstAttribute="height" constant="627" id="yj0-Y0-hGm"/>
+                                </constraints>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dye-Gr-npZ">
+                                <rect key="frame" x="76" y="84" width="223" height="29"/>
+                                <segments>
+                                    <segment title="100M"/>
+                                    <segment title="200M"/>
+                                    <segment title="350M"/>
+                                    <segment title="500M"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dye-Gr-npZ" firstAttribute="top" secondItem="9RG-eP-mbd" secondAttribute="top" constant="20" id="I9r-xW-b0E"/>
+                            <constraint firstItem="w92-PH-MUC" firstAttribute="leading" secondItem="9RG-eP-mbd" secondAttribute="leading" id="OX8-9M-Y45"/>
+                            <constraint firstItem="w92-PH-MUC" firstAttribute="top" secondItem="P3L-k9-eXv" secondAttribute="top" id="ex1-7A-ASv"/>
+                            <constraint firstItem="w92-PH-MUC" firstAttribute="bottom" secondItem="9RG-eP-mbd" secondAttribute="bottom" id="olf-RK-e5g"/>
+                            <constraint firstItem="w92-PH-MUC" firstAttribute="trailing" secondItem="9RG-eP-mbd" secondAttribute="trailing" id="rHK-F3-myP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9RG-eP-mbd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTk-he-sju" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1626.4000000000001" y="84.107946026986511"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8bV-GQ-YRE">
