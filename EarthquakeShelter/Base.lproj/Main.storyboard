@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="88.605697151424295"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Jkr-FC-B1s">
             <objects>
-                <viewController id="4yx-1O-ehN" sceneMemberID="viewController">
+                <viewController id="4yx-1O-ehN" customClass="MapViewController" customModule="EarthquakeShelter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="P3L-k9-eXv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,6 +157,9 @@
                                     <segment title="350M"/>
                                     <segment title="500M"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentSelected:" destination="4yx-1O-ehN" eventType="valueChanged" id="5HZ-qv-bgy"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,10 +172,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9RG-eP-mbd"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="w92-PH-MUC" id="IHe-s9-x7q"/>
+                        <outlet property="segment" destination="Dye-Gr-npZ" id="guM-l7-1or"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTk-he-sju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1626.4000000000001" y="84.107946026986511"/>
+            <point key="canvasLocation" x="1588" y="89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8bV-GQ-YRE">
