@@ -5,9 +5,70 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Shelter View Controller-->
+        <scene sceneID="Afe-36-d5d">
+            <objects>
+                <viewController id="Awi-GW-K16" customClass="ShelterViewController" customModule="EarthquakeShelter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TP0-n4-3ki">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-pw-b0t">
+                                <rect key="frame" x="0.0" y="33" width="375" height="634"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="634" id="wEp-bR-Axu"/>
+                                    <constraint firstAttribute="width" constant="375" id="y7F-YK-RHy"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RE" textLabel="oFC-c6-icu" detailTextLabel="kzR-Hx-rib" style="IBUITableViewCellStyleSubtitle" id="Cxb-5H-e3k">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cxb-5H-e3k" id="yZE-A1-pNO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oFC-c6-icu">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" tag="2" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kzR-Hx-rib">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q3c-pw-b0t" firstAttribute="trailing" secondItem="VYL-0J-CYL" secondAttribute="trailing" id="GJ4-U7-8MW"/>
+                            <constraint firstItem="Q3c-pw-b0t" firstAttribute="leading" secondItem="VYL-0J-CYL" secondAttribute="leading" id="LrI-Oy-HjQ"/>
+                            <constraint firstItem="Q3c-pw-b0t" firstAttribute="bottom" secondItem="VYL-0J-CYL" secondAttribute="bottom" id="YMy-rb-FVu"/>
+                            <constraint firstItem="Q3c-pw-b0t" firstAttribute="top" secondItem="TP0-n4-3ki" secondAttribute="top" id="i8M-E3-Drf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VYL-0J-CYL"/>
+                    </view>
+                    <connections>
+                        <outlet property="myTableView" destination="Q3c-pw-b0t" id="zF3-Qu-Xy6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7v-Mv-yJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="-669"/>
+        </scene>
         <!--지진대피요령-->
         <scene sceneID="an0-Le-2AL">
             <objects>
@@ -26,25 +87,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="603.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="지진대피요령.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="v65-jZ-bk3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="지진대피요령.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cjH-xw-ACd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="614.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="Dtw-y0-xrS"/>
-                                                        <constraint firstAttribute="width" constant="375" id="jQ3-to-iFO"/>
-                                                        <constraint firstAttribute="height" constant="604" id="m5j-eB-9Ns"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="604.5" id="xOp-cz-Ldt"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="NPz-yS-bzG"/>
+                                                        <constraint firstAttribute="width" constant="375" id="Yx6-hk-eaP"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="614.5" id="sWh-mF-v4V"/>
+                                                        <constraint firstAttribute="height" constant="614" id="wTd-aw-yjL"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="v65-jZ-bk3" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leading" id="1ui-hz-0dJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="v65-jZ-bk3" secondAttribute="trailing" id="2YR-UE-aWu"/>
-                                                <constraint firstItem="v65-jZ-bk3" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="top" id="GOU-wM-zfy"/>
-                                                <constraint firstAttribute="bottom" secondItem="v65-jZ-bk3" secondAttribute="bottom" id="HdZ-AJ-sJb"/>
-                                                <constraint firstAttribute="trailing" secondItem="v65-jZ-bk3" secondAttribute="trailing" id="cFx-tv-kLL"/>
-                                                <constraint firstAttribute="bottom" secondItem="v65-jZ-bk3" secondAttribute="bottom" id="dpe-Va-SPe"/>
-                                                <constraint firstItem="v65-jZ-bk3" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="top" id="iIm-EC-nnP"/>
-                                                <constraint firstItem="v65-jZ-bk3" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leading" id="ldc-z6-r6i"/>
+                                                <constraint firstAttribute="bottom" secondItem="cjH-xw-ACd" secondAttribute="bottom" id="GxG-F2-Az8"/>
+                                                <constraint firstAttribute="trailing" secondItem="cjH-xw-ACd" secondAttribute="trailing" id="J9L-Xh-Eqd"/>
+                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="top" id="Nva-q4-3gt"/>
+                                                <constraint firstAttribute="bottom" secondItem="cjH-xw-ACd" secondAttribute="bottom" id="VW9-eC-m3T"/>
+                                                <constraint firstAttribute="trailing" secondItem="cjH-xw-ACd" secondAttribute="trailing" id="hdl-aT-WUR"/>
+                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leading" id="nGI-mj-MrP"/>
+                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="top" id="oOG-Nq-INc"/>
+                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leading" id="r9Z-8o-m2t"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -57,7 +118,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="지진대피요령" id="ECG-bC-OjL">
-                        <barButtonItem key="leftBarButtonItem" title="대피소" id="lBK-X1-3ey"/>
+                        <barButtonItem key="leftBarButtonItem" title="대피소" id="lBK-X1-3ey">
+                            <connections>
+                                <segue destination="Awi-GW-K16" kind="show" id="X2K-Bc-mSz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="지도" id="g0l-HY-yKp"/>
                     </navigationItem>
                 </tableViewController>
