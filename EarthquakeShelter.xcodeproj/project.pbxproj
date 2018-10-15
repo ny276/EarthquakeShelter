@@ -11,6 +11,7 @@
 		34A4D292217090C8003A2D31 /* 지진대피요령.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34A4D291217090C8003A2D31 /* 지진대피요령.jpg */; };
 		34A4D294217091F2003A2D31 /* ShelterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4D293217091F2003A2D31 /* ShelterViewController.swift */; };
 		34A4D29621709639003A2D31 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4D29521709639003A2D31 /* MapViewController.swift */; };
+		34A4D2B821743BF2003A2D31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A4D2B721743BF2003A2D31 /* CoreLocation.framework */; };
 		34A78E8F216B441B00224C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A78E8E216B441B00224C59 /* AppDelegate.swift */; };
 		34A78E91216B441B00224C59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A78E90216B441B00224C59 /* ViewController.swift */; };
 		34A78E94216B441B00224C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A78E92216B441B00224C59 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		34A4D291217090C8003A2D31 /* 지진대피요령.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "지진대피요령.jpg"; sourceTree = "<group>"; };
 		34A4D293217091F2003A2D31 /* ShelterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterViewController.swift; sourceTree = "<group>"; };
 		34A4D29521709639003A2D31 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		34A4D2B721743BF2003A2D31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		34A78E8B216B441B00224C59 /* EarthquakeShelter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthquakeShelter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A78E8E216B441B00224C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A78E90216B441B00224C59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A4D2B821743BF2003A2D31 /* CoreLocation.framework in Frameworks */,
 				34A78EA2216B444900224C59 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +86,7 @@
 		34A78EA0216B444900224C59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34A4D2B721743BF2003A2D31 /* CoreLocation.framework */,
 				34A78EA1216B444900224C59 /* MapKit.framework */,
 			);
 			name = Frameworks;

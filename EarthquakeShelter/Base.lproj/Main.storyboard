@@ -149,7 +149,7 @@
                                     <constraint firstAttribute="height" constant="627" id="yj0-Y0-hGm"/>
                                 </constraints>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dye-Gr-npZ">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dye-Gr-npZ">
                                 <rect key="frame" x="76" y="84" width="223" height="29"/>
                                 <segments>
                                     <segment title="100M"/>
@@ -164,8 +164,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Dye-Gr-npZ" firstAttribute="leading" secondItem="P3L-k9-eXv" secondAttribute="leadingMargin" constant="60" id="6Xn-ai-Msg"/>
                             <constraint firstItem="Dye-Gr-npZ" firstAttribute="top" secondItem="9RG-eP-mbd" secondAttribute="top" constant="20" id="I9r-xW-b0E"/>
                             <constraint firstItem="w92-PH-MUC" firstAttribute="leading" secondItem="9RG-eP-mbd" secondAttribute="leading" id="OX8-9M-Y45"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dye-Gr-npZ" secondAttribute="trailing" constant="60" id="cOQ-uV-Cmj"/>
                             <constraint firstItem="w92-PH-MUC" firstAttribute="top" secondItem="P3L-k9-eXv" secondAttribute="top" id="ex1-7A-ASv"/>
                             <constraint firstItem="w92-PH-MUC" firstAttribute="bottom" secondItem="9RG-eP-mbd" secondAttribute="bottom" id="olf-RK-e5g"/>
                             <constraint firstItem="w92-PH-MUC" firstAttribute="trailing" secondItem="9RG-eP-mbd" secondAttribute="trailing" id="rHK-F3-myP"/>
