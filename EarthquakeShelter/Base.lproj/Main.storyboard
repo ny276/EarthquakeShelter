@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="178" y="-669"/>
         </scene>
-        <!--지진대피요령-->
+        <!--부산 지진대피소-->
         <scene sceneID="an0-Le-2AL">
             <objects>
-                <tableViewController id="ozs-mF-qao" sceneMemberID="viewController">
+                <tableViewController id="ozs-mF-qao" customClass="MapTableViewController" customModule="EarthquakeShelter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Amu-R2-0mc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,25 +87,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="603.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="지진대피요령.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cjH-xw-ACd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="614.5"/>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vPA-p6-ZmE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="NPz-yS-bzG"/>
-                                                        <constraint firstAttribute="width" constant="375" id="Yx6-hk-eaP"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="614.5" id="sWh-mF-v4V"/>
-                                                        <constraint firstAttribute="height" constant="614" id="wTd-aw-yjL"/>
+                                                        <constraint firstAttribute="width" constant="375" id="15J-qQ-VKi"/>
+                                                        <constraint firstAttribute="height" constant="604" id="gwO-ZK-Iva"/>
                                                     </constraints>
-                                                </imageView>
+                                                </mapView>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="n1Q-Tt-edi">
+                                                    <rect key="frame" x="63" y="41" width="249" height="29"/>
+                                                    <segments>
+                                                        <segment title="First"/>
+                                                        <segment title="Second"/>
+                                                        <segment title="350M"/>
+                                                        <segment title="500M"/>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="cjH-xw-ACd" secondAttribute="bottom" id="GxG-F2-Az8"/>
-                                                <constraint firstAttribute="trailing" secondItem="cjH-xw-ACd" secondAttribute="trailing" id="J9L-Xh-Eqd"/>
-                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="top" id="Nva-q4-3gt"/>
-                                                <constraint firstAttribute="bottom" secondItem="cjH-xw-ACd" secondAttribute="bottom" id="VW9-eC-m3T"/>
-                                                <constraint firstAttribute="trailing" secondItem="cjH-xw-ACd" secondAttribute="trailing" id="hdl-aT-WUR"/>
-                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leading" id="nGI-mj-MrP"/>
-                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="top" id="oOG-Nq-INc"/>
-                                                <constraint firstItem="cjH-xw-ACd" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leading" id="r9Z-8o-m2t"/>
+                                                <constraint firstAttribute="bottom" secondItem="vPA-p6-ZmE" secondAttribute="bottom" id="Dda-Gw-EzY"/>
+                                                <constraint firstItem="vPA-p6-ZmE" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leading" id="DyA-se-bK5"/>
+                                                <constraint firstItem="vPA-p6-ZmE" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="top" id="IQ9-Iu-7X4"/>
+                                                <constraint firstAttribute="trailing" secondItem="vPA-p6-ZmE" secondAttribute="trailing" id="Nwq-Sh-x8C"/>
+                                                <constraint firstItem="n1Q-Tt-edi" firstAttribute="leading" secondItem="wh6-tc-Qpl" secondAttribute="leadingMargin" constant="47" id="OWo-lg-8kY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="n1Q-Tt-edi" secondAttribute="trailing" constant="47" id="iAa-FZ-bb2"/>
+                                                <constraint firstItem="n1Q-Tt-edi" firstAttribute="top" secondItem="wh6-tc-Qpl" secondAttribute="topMargin" constant="30" id="tXZ-D2-U4o"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -117,71 +123,62 @@
                             <outlet property="delegate" destination="ozs-mF-qao" id="NYg-FI-8Mn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="지진대피요령" id="ECG-bC-OjL">
+                    <navigationItem key="navigationItem" title="부산 지진대피소" id="ECG-bC-OjL">
                         <barButtonItem key="leftBarButtonItem" title="대피소" id="lBK-X1-3ey">
                             <connections>
                                 <segue destination="Awi-GW-K16" kind="show" id="X2K-Bc-mSz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="지도" id="g0l-HY-yKp">
+                        <barButtonItem key="rightBarButtonItem" title="대피요령" id="g0l-HY-yKp">
                             <connections>
                                 <segue destination="4yx-1O-ehN" kind="show" id="3Dq-ip-C1h"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myMapView" destination="vPA-p6-ZmE" id="y6i-oe-eHf"/>
+                        <outlet property="segment" destination="n1Q-Tt-edi" id="2Jq-LC-lMg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIo-rN-K2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="88.605697151424295"/>
         </scene>
-        <!--Map View Controller-->
+        <!--View Controller-->
         <scene sceneID="Jkr-FC-B1s">
             <objects>
-                <viewController id="4yx-1O-ehN" customClass="MapViewController" customModule="EarthquakeShelter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="P3L-k9-eXv">
+                <viewController id="4yx-1O-ehN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P3L-k9-eXv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w92-PH-MUC">
-                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="지진대피요령.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="smn-62-TeR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="WBa-Vh-ySy"/>
-                                    <constraint firstAttribute="height" constant="627" id="yj0-Y0-hGm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="2jk-gC-SDA"/>
+                                    <constraint firstAttribute="height" constant="603" id="LAe-Ni-5YP"/>
+                                    <constraint firstAttribute="width" constant="375" id="sAZ-zN-8zZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="603" id="yv6-bR-Jcx"/>
                                 </constraints>
-                            </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dye-Gr-npZ">
-                                <rect key="frame" x="76" y="84" width="223" height="29"/>
-                                <segments>
-                                    <segment title="100M"/>
-                                    <segment title="200M"/>
-                                    <segment title="350M"/>
-                                    <segment title="500M"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentSelected:" destination="4yx-1O-ehN" eventType="valueChanged" id="5HZ-qv-bgy"/>
-                                </connections>
-                            </segmentedControl>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Dye-Gr-npZ" firstAttribute="leading" secondItem="P3L-k9-eXv" secondAttribute="leadingMargin" constant="60" id="6Xn-ai-Msg"/>
-                            <constraint firstItem="Dye-Gr-npZ" firstAttribute="top" secondItem="9RG-eP-mbd" secondAttribute="top" constant="20" id="I9r-xW-b0E"/>
-                            <constraint firstItem="w92-PH-MUC" firstAttribute="leading" secondItem="9RG-eP-mbd" secondAttribute="leading" id="OX8-9M-Y45"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dye-Gr-npZ" secondAttribute="trailing" constant="60" id="cOQ-uV-Cmj"/>
-                            <constraint firstItem="w92-PH-MUC" firstAttribute="top" secondItem="P3L-k9-eXv" secondAttribute="top" id="ex1-7A-ASv"/>
-                            <constraint firstItem="w92-PH-MUC" firstAttribute="bottom" secondItem="9RG-eP-mbd" secondAttribute="bottom" id="olf-RK-e5g"/>
-                            <constraint firstItem="w92-PH-MUC" firstAttribute="trailing" secondItem="9RG-eP-mbd" secondAttribute="trailing" id="rHK-F3-myP"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="leading" secondItem="9RG-eP-mbd" secondAttribute="leading" id="5qI-Ff-YkU"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="bottom" secondItem="9RG-eP-mbd" secondAttribute="bottom" id="Ggd-3z-2Mt"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="bottom" secondItem="9RG-eP-mbd" secondAttribute="bottom" id="dr8-yj-PCC"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="top" secondItem="9RG-eP-mbd" secondAttribute="top" id="eVd-Ny-Gwc"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="top" secondItem="9RG-eP-mbd" secondAttribute="top" id="f1q-86-0BK"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="trailing" secondItem="9RG-eP-mbd" secondAttribute="trailing" id="fOn-De-G6n"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="trailing" secondItem="9RG-eP-mbd" secondAttribute="trailing" id="o2P-if-l9f"/>
+                            <constraint firstItem="smn-62-TeR" firstAttribute="leading" secondItem="9RG-eP-mbd" secondAttribute="leading" id="y7h-k0-2tR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9RG-eP-mbd"/>
                     </view>
-                    <connections>
-                        <outlet property="mapView" destination="w92-PH-MUC" id="IHe-s9-x7q"/>
-                        <outlet property="segment" destination="Dye-Gr-npZ" id="guM-l7-1or"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTk-he-sju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="89"/>
+            <point key="canvasLocation" x="1588" y="88.605697151424295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8bV-GQ-YRE">
